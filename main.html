@@ -4,30 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CarDealer</title>
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
     <div class="container">
       <nav class="navbar">
         <img src="img/LOGO.svg" alt="CarDealer" />
         <ul>
-          <li><a href="main page"></a></li>
-          <li><a href="contact"></a></li>
-          <li><a href="orders"></a></li>
+          <li><a href="#">main page</a></li>
+          <li><a href="#">contact</a></li>
+          <li><a href="#">orders</a></li>
         </ul>
       </nav>
-      <main>
-        <h1>CarDealer: Quality Pre-Owned Cars, Your Reliable Choice!</h1>
+      <main class="mainSection">
+        <div class="mainTitle">
+          <h1>
+            CarDealer: <br />Quality Pre-Owned Cars, <br />
+            Your Reliable Choice!
+          </h1>
+        </div>
         <img src="img/mainBG-desktop.png" alt="silver BMW" />
       </main>
-      <section>
-        <div class="searchContainer">
+      <section class="searchContainer">
+        <div class="searchInputContainer">
           <input type="text" />
         </div>
       </section>
       <section class="carListContainer">
         <div class="carItem">
           <img id="cardCarImg" src="/car-img/bmw-e36.jpg" alt="" />
+          <h2 id="model">e36</h2>
+          <p>brand: <span id="brand">BMW</span></p>
+          <p>engine power: <span id="engine">2.0 HDI 130km</span></p>
+          <p>year of production: <span id="year">1997</span></p>
+          <p>course: <span is="course">259,345km</span></p>
+          <h2 id="price">5000 zł</h2>
+          <button id="orderButton">order</button>
         </div>
       </section>
     </div>
