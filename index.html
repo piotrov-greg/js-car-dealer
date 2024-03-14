@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CarDealer</title>
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/mainpage.css" />
     <script defer src="car-list.js"></script>
     <script defer src="main.js"></script>
     <script
-      src="https://kit.fontawesome.com/05771a8455.js"
+      src="https://kit.fontawesome.com/4a9262d422.js"
       crossorigin="anonymous"
     ></script>
   </head>
@@ -16,21 +17,23 @@
     <!-- MAIN PAGE---------------------- -->
     <div class="container">
       <nav class="navbar">
-        <img src="img/LOGO.svg" alt="CarDealer" />
-        <ul>
-          <li><a href="#">main page</a></li>
-          <li><a href="#">contact</a></li>
-          <li><a href="#">orders</a></li>
-        </ul>
+        <img id="logo" src="img/logo.svg" alt="CarDealer" />
+        <div class="navbarIcons">
+          <i class="fa-solid fa-star" style="color: #ff9f1c"></i>
+          <i class="fa-solid fa-cart-shopping" style="color: #ff9f1c"></i>
+        </div>
       </nav>
       <main class="mainSection">
         <div class="mainTitle">
           <h1>
-            CarDealer: <br />Quality Pre-Owned Cars, <br />
+            <span>CarDealer:</span> <br />Quality Pre-Owned Cars, <br />
             Your Reliable Choice!
           </h1>
         </div>
-        <img src="img/mainBG-desktop.png" alt="silver BMW" />
+        <aside class="imgAside">
+          <img src="img/mainBG.png" alt="silver BMW" />
+          <div class="carBg"></div>
+        </aside>
       </main>
       <section class="searchContainer">
         <div class="searchInputContainer">
