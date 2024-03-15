@@ -27,7 +27,7 @@ const carList = [
     price: "$18,000",
   },
   {
-    image: "https://example.com/honda_civic.jpg",
+    image: "https://shorturl.at/BOS02",
     brand: "Honda",
     model: "Civic",
     year: 2015,
@@ -36,7 +36,7 @@ const carList = [
     price: "$15,500",
   },
   {
-    image: "https://example.com/bmw_3series.jpg",
+    image: "https://shorturl.at/dkUW2",
     brand: "BMW",
     model: "3 Series",
     year: 2016,
@@ -45,7 +45,7 @@ const carList = [
     price: "$25,000",
   },
   {
-    image: "https://example.com/audi_a4.jpg",
+    image: "https://shorturl.at/ikpt7",
     brand: "Audi",
     model: "A4",
     year: 2014,
@@ -54,8 +54,8 @@ const carList = [
     price: "$21,000",
   },
   {
-    image: "https://example.com/mercedes_c_class.jpg",
-    brand: "Mercedes-Benz",
+    image: "https://shorturl.at/wNQW0",
+    brand: "Mercedes",
     model: "C-Class",
     year: 2017,
     power: "180 HP",
@@ -63,7 +63,7 @@ const carList = [
     price: "$28,000",
   },
   {
-    image: "https://example.com/bmw_x5.jpg",
+    image: "https://shorturl.at/fyFIZ",
     brand: "BMW",
     model: "X5",
     year: 2019,
@@ -72,7 +72,7 @@ const carList = [
     price: "$45,000",
   },
   {
-    image: "https://example.com/audi_q7.jpg",
+    image: "https://t.ly/0AbJK",
     brand: "Audi",
     model: "Q7",
     year: 2018,
@@ -81,7 +81,7 @@ const carList = [
     price: "$38,000",
   },
   {
-    image: "https://example.com/ford_mustang.jpg",
+    image: "https://t.ly/FFVZv",
     brand: "Ford",
     model: "Mustang",
     year: 2016,
@@ -90,7 +90,7 @@ const carList = [
     price: "$32,000",
   },
   {
-    image: "https://example.com/toyota_camry.jpg",
+    image: "https://t.ly/6t7tb",
     brand: "Toyota",
     model: "Camry",
     year: 2020,
@@ -99,7 +99,7 @@ const carList = [
     price: "$26,500",
   },
   {
-    image: "https://example.com/hyundai_santa_fe.jpg",
+    image: "https://t.ly/DdMn1",
     brand: "Hyundai",
     model: "Santa Fe",
     year: 2019,
@@ -108,13 +108,13 @@ const carList = [
     price: "$24,000",
   },
   {
-    image: "https://example.com/lancia_delta_integrale.jpg",
-    brand: "Lancia",
-    model: "Delta Integrale",
+    image: "https://t.ly/hpwpV",
+    brand: "BMW",
+    model: "e34",
     year: 1992,
     power: "200 HP",
     mileage: "80,000 km",
-    price: "$20,000",
+    price: "$2,000",
   },
   {
     image: "https://example.com/renault_avantime.jpg",
@@ -136,12 +136,12 @@ const carList = [
   },
   {
     image: "https://example.com/datsun_240z.jpg",
-    brand: "Datsun",
-    model: "240Z",
-    year: 1970,
+    brand: "Audi",
+    model: "90",
+    year: 1990,
     power: "150 HP",
-    mileage: "50,000 km",
-    price: "$40,000",
+    mileage: "350,000 km",
+    price: "$1,650",
   },
   {
     image: "https://example.com/isuzu_vehicross.jpg",
