@@ -1,32 +1,47 @@
 const $carListContainer = document.querySelector(".carListContainer");
-const $carItem = document.querySelectorAll(".carItem");
-const creatCarItem = function () {
-  carList.forEach((car) => {
-    const carItem = document.createElement("div");
-    carItem.classList.add("carItem");
-    const imgCar = document.createElement("img");
-    imgCar.classList.add("cardCarImg");
-    imgCar.src = car.image;
-    imgCar.alt = "car img";
-    const brandModel = document.createElement("h2");
-    brandModel.innerHTML = `${car.brand} <span>${car.model}</span>`;
-    const power = document.createElement("p");
-    power.innerHTML = `power: <span>${car.power}</span>`;
-    const carYear = document.createElement("p");
-    carYear.innerHTML = `year: <span>${car.year}</span>`;
-    const mileage = document.createElement("p");
-    mileage.innerHTML = `mileage: <span>${car.mileage}</span>`;
-    const price = document.createElement("h2");
-    price.classList.add("price");
-    price.innerHTML = car.price;
-    carItem.appendChild(imgCar);
-    carItem.appendChild(brandModel);
-    carItem.appendChild(power);
-    carItem.appendChild(carYear);
-    carItem.appendChild(mileage);
-    carItem.appendChild(price);
-    $carListContainer.appendChild(carItem);
-  });
+const $costumizePage = document.getElementById("costumizePage");
+const $carFilter = document.getElementById("car-filter");
+const $return = document.querySelector(".return");
+
+const tooglePage = function () {
+  $costumizePage.classList.toggle("hidden");
 };
 
-creatCarItem();
+function displayCars(cars) {
+  $carListContainer.innerHTML = "";
+  cars.forEach((car) => {
+    const carDiv = document.createElement("div");
+    carDiv.classList.add("carItem");
+    carDiv.innerHTML = `
+      <img class="cardCarImg" src="${car.image}" alt="${car.brand} ${car.model}">
+      <h2>${car.brand} ${car.model}</h2>
+      <p>Year: <span>${car.year}<span></p>
+      <p>Power: <span>${car.power}</span></p>
+      <p>Mileage: <span>${car.mileage}</span></p>
+      <h2 class="price"><span>${car.price}<span></h2>
+    `;
+    carDiv.addEventListener("click", tooglePage);
+
+    $carListContainer.appendChild(carDiv);
+  });
+}
+
+function filterCars(make) {
+  if (make === "any") {
+    displayCars(carList);
+  } else {
+    const filteredCars = carList.filter(
+      (car) => car.brand.toLowerCase() === make
+    );
+    displayCars(filteredCars);
+  }
+}
+
+$carFilter.addEventListener("change", function () {
+  const selectedMake = this.value.toLowerCase();
+  filterCars(selectedMake);
+});
+
+displayCars(carList);
+
+$return.addEventListener("click", tooglePage);

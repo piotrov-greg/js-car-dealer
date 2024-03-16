@@ -9,3 +9,7 @@ body {
   justify-content: center;
   background-color: rgb(240, 240, 240);
 }
+
+.hidden {
+  display: none;
+}

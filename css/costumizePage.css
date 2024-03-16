@@ -1,0 +1,7 @@
+#costumizePage {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 3;
+  background-color: rgb(240, 240, 240);
+}
