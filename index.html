@@ -6,7 +6,7 @@
     <title>CarDealer</title>
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/mainpage.css" />
-    <link rel="stylesheet" href="css/costumizePage.css" />
+    <link rel="stylesheet" href="css/custumizePage.css" />
     <script defer src="js/car-list.js"></script>
     <script defer src="js/mainPage.js"></script>
     <script
@@ -24,32 +24,39 @@
         </div>
         <section class="selectedCarContainer">
           <div id="selectedCarInfo">
-            <img class="cardCarImg" src="car-img/bmw-e36.jpg" alt="" />
-            <h2>BWM e36</h2>
-            <p>Year: <span>1999</span></p>
-            <p>Power: <span>150hp</span></p>
-            <p>Mileage: <span>250 000</span></p>
-            <h2 class="price">$1000</h2>
+            <img id="customImg" class="cardCarImg" src="" alt="" />
+            <h2 id="customMake"></h2>
+            <p>Year: <span id="customYear"></span></p>
+            <p>Power: <span id="customHp"></span></p>
+            <p>Mileage: <span id="customMileage"></span></p>
+            <h2 id="customPrice" class="price"></h2>
           </div>
 
           <div class="costumizationOptions">
             <h2>Accessories:</h2>
             <div class="accContainer">
-              <div id="accItem" class="accItem">
+              <div class="accItem">
                 <h3>tinted windows: $<span>1000</span></h3>
               </div>
-              <div id="accItem" class="accItem">
+              <div class="accItem">
                 <h3>premium audio system: $<span>1500</span></h3>
               </div>
-              <div id="accItem" class="accItem">
+              <div class="accItem">
                 <h3>extra set of tires: $<span>500</span></h3>
               </div>
-              <div id="accItem" class="accItem">
+              <div class="accItem">
                 <h3>additional insurance: $<span>200</span></h3>
               </div>
             </div>
           </div>
         </section>
+        <footer class="bottomPart">
+          <aside class="totalPriceContainer">
+            <h2>Total price: <span id="totalPrice"></span></h2>
+            <button id="buy">Buy now</button>
+          </aside>
+          <div class="formContainer"></div>
+        </footer>
       </section>
     </div>
 

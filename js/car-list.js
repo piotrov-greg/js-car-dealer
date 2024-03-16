@@ -6,7 +6,7 @@ const carList = [
     year: 2018,
     power: "140 HP",
     mileage: "50,000 km",
-    price: "$20,000",
+    price: 20000,
   },
   {
     image: "https://shorturl.at/vJX08",
@@ -15,7 +15,7 @@ const carList = [
     year: 2019,
     power: "120 HP",
     mileage: "40,000 km",
-    price: "$22,000",
+    price: 22000,
   },
   {
     image: "https://shorturl.at/zJLOY",
@@ -24,7 +24,7 @@ const carList = [
     year: 2017,
     power: "130 HP",
     mileage: "60,000 km",
-    price: "$18,000",
+    price: 18000,
   },
   {
     image: "https://shorturl.at/BOS02",
@@ -33,7 +33,7 @@ const carList = [
     year: 2015,
     power: "125 HP",
     mileage: "70,000 km",
-    price: "$15,500",
+    price: 15500,
   },
   {
     image: "https://shorturl.at/dkUW2",
@@ -42,7 +42,7 @@ const carList = [
     year: 2016,
     power: "160 HP",
     mileage: "45,000 km",
-    price: "$25,000",
+    price: 25000,
   },
   {
     image: "https://shorturl.at/ikpt7",
@@ -51,7 +51,7 @@ const carList = [
     year: 2014,
     power: "150 HP",
     mileage: "55,000 km",
-    price: "$21,000",
+    price: 21000,
   },
   {
     image: "https://shorturl.at/wNQW0",
@@ -60,7 +60,7 @@ const carList = [
     year: 2017,
     power: "180 HP",
     mileage: "55,000 km",
-    price: "$28,000",
+    price: 28000,
   },
   {
     image: "https://shorturl.at/fyFIZ",
@@ -69,7 +69,7 @@ const carList = [
     year: 2019,
     power: "250 HP",
     mileage: "30,000 km",
-    price: "$45,000",
+    price: 45000,
   },
   {
     image: "https://t.ly/0AbJK",
@@ -78,7 +78,7 @@ const carList = [
     year: 2018,
     power: "200 HP",
     mileage: "40,000 km",
-    price: "$38,000",
+    price: 38000,
   },
   {
     image: "https://t.ly/FFVZv",
@@ -87,7 +87,7 @@ const carList = [
     year: 2016,
     power: "300 HP",
     mileage: "25,000 km",
-    price: "$32,000",
+    price: 32000,
   },
   {
     image: "https://t.ly/6t7tb",
@@ -96,7 +96,7 @@ const carList = [
     year: 2020,
     power: "190 HP",
     mileage: "20,000 km",
-    price: "$26,500",
+    price: 26500,
   },
   {
     image: "https://t.ly/DdMn1",
@@ -105,7 +105,7 @@ const carList = [
     year: 2019,
     power: "170 HP",
     mileage: "35,000 km",
-    price: "$24,000",
+    price: 24000,
   },
   {
     image: "https://t.ly/hpwpV",
@@ -114,7 +114,7 @@ const carList = [
     year: 1992,
     power: "200 HP",
     mileage: "80,000 km",
-    price: "$2,000",
+    price: 2000,
   },
   {
     image: "https://shorturl.at/uF125",
@@ -123,7 +123,7 @@ const carList = [
     year: 1990,
     power: "90 HP",
     mileage: "377,500 km",
-    price: "$1,000",
+    price: 1000,
   },
   {
     image: "https://shorturl.at/nIJUZ",
@@ -132,7 +132,7 @@ const carList = [
     year: 1991,
     power: "160 HP",
     mileage: "398,000 km",
-    price: "$2,300",
+    price: 2300,
   },
   {
     image: "https://shorturl.at/opsL1",
@@ -141,7 +141,7 @@ const carList = [
     year: 1992,
     power: "150 HP",
     mileage: "350,000 km",
-    price: "$1,650",
+    price: 1650,
   },
   {
     image: "https://shorturl.at/buwU7",
@@ -150,7 +150,7 @@ const carList = [
     year: 2007,
     power: "160 HP",
     mileage: "420,000 km",
-    price: "$3,000",
+    price: 3000,
   },
   {
     image: "https://shorturl.at/bdhGN",
@@ -159,7 +159,7 @@ const carList = [
     year: 1990,
     power: "170 HP",
     mileage: "269,000 km",
-    price: "$3,500",
+    price: 3500,
   },
   {
     image: "https://tinyurl.com/5ddpwspu",
@@ -168,7 +168,7 @@ const carList = [
     year: 2011,
     power: "185 HP",
     mileage: "239,000 km",
-    price: "$10,500",
+    price: 10500,
   },
   {
     image: "https://tinyurl.com/snvwarmn",
@@ -177,7 +177,7 @@ const carList = [
     year: 2006,
     power: "90 HP",
     mileage: "90,000 km",
-    price: "$3,000",
+    price: 3000,
   },
   {
     image: "https://tinyurl.com/9kwdvcyj",
@@ -186,7 +186,7 @@ const carList = [
     year: 1991,
     power: "210 HP",
     mileage: "60,000 km",
-    price: "4,000",
+    price: 4000,
   },
   {
     image: "https://tinyurl.com/mr2cyc38",
@@ -195,7 +195,7 @@ const carList = [
     year: 1995,
     power: "300 HP",
     mileage: "80,000 km",
-    price: "$12,000",
+    price: 12000,
   },
   {
     image: "https://tinyurl.com/mrxmkz2b",
@@ -204,7 +204,7 @@ const carList = [
     year: 2000,
     power: "190 HP",
     mileage: "50,000 km",
-    price: "$30,000",
+    price: 30000,
   },
   {
     image: "https://tinyurl.com/33e2pwk8",
@@ -213,6 +213,6 @@ const carList = [
     year: 1992,
     power: "230 HP",
     mileage: "90,000 km",
-    price: "$7,500",
+    price: 7500,
   },
 ];
