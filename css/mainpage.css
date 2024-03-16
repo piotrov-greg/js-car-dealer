@@ -2,10 +2,6 @@
   width: 90%;
 }
 
-#logo {
-  height: 80px;
-}
-
 .navbar {
   height: 100px;
   display: flex;
@@ -17,10 +13,6 @@
   width: 200px;
   display: flex;
   justify-content: space-around;
-}
-
-.fa-solid {
-  font-size: 2rem;
 }
 
 .mainSection {

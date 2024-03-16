@@ -2,6 +2,7 @@ const $carListContainer = document.querySelector(".carListContainer");
 const $costumizePage = document.getElementById("costumizePage");
 const $carFilter = document.getElementById("car-filter");
 const $return = document.querySelector(".return");
+const $accItem = document.querySelectorAll("#accItem");
 
 const tooglePage = function () {
   $costumizePage.classList.toggle("hidden");
@@ -15,7 +16,7 @@ function displayCars(cars) {
     carDiv.innerHTML = `
       <img class="cardCarImg" src="${car.image}" alt="${car.brand} ${car.model}">
       <h2>${car.brand} ${car.model}</h2>
-      <p>Year: <span>${car.year}<span></p>
+      <p>Year: <span>${car.year}</span></p>
       <p>Power: <span>${car.power}</span></p>
       <p>Mileage: <span>${car.mileage}</span></p>
       <h2 class="price"><span>${car.price}<span></h2>
@@ -45,3 +46,9 @@ $carFilter.addEventListener("change", function () {
 displayCars(carList);
 
 $return.addEventListener("click", tooglePage);
+
+for (i = 0; i < $accItem.length; i++) {
+  $accItem[i].addEventListener("click", function (ß) {
+    this.classList.toggle("accItemClicked");
+  });
+}

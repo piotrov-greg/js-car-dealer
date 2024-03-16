@@ -10,6 +10,21 @@ body {
   background-color: rgb(240, 240, 240);
 }
 
+.navbar {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-solid {
+  font-size: 2rem;
+}
+
+#logo {
+  height: 80px;
+}
+
 .hidden {
   display: none;
 }
