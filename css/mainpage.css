@@ -81,23 +81,12 @@
   border-radius: 35px;
 }
 
-#search {
-  outline: none;
-  border: none;
+#car-filter {
   background-color: transparent;
-  width: 230px;
+  border: none;
+  outline: none;
 
-  font-size: 20px;
-}
-
-#searchIcon {
-  font-size: 20px;
-  color: #b0b0b0;
-}
-
-#searchIcon:hover {
-  color: rgb(97, 97, 97);
-  cursor: pointer;
+  padding-right: 180px;
 }
 
 .carListContainer {
