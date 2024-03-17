@@ -166,7 +166,15 @@ function checkForm() {
     alert("incorrect date");
   }
 }
-$return2.addEventListener("click", () => $endPage.classList.add("hidden"));
+$return2.addEventListener("click", () => {
+  $endPage.classList.add("hidden");
+
+  for (let i = 0; i < $accItem.length; i++) {
+    if ($accItem[i].classList.contains("accItemClicked")) {
+      $accItem[i].classList.remove("accItemClicked");
+    }
+  }
+});
 
 // LOCALSTORAGE -----------------
 if (localStorage.getItem("form_data")) {

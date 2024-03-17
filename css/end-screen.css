@@ -3,7 +3,7 @@
   width: 100%;
   background-color: rgb(240, 240, 240);
   position: fixed;
-  z-index: 6;
+  z-index: 10;
 }
 
 .endS-container {
