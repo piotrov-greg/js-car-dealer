@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/mainpage.css" />
     <link rel="stylesheet" href="css/custumizePage.css" />
+    <link rel="stylesheet" href="/css/end-screen.css" />
     <script defer src="js/car-list.js"></script>
     <script defer src="js/mainPage.js"></script>
     <script
@@ -15,12 +16,27 @@
     ></script>
   </head>
   <body>
+    <!-- END SCREEN-------------- -->
+    <div id="endScreen" class="hidden">
+      <div class="endS-container">
+        <div class="navbar">
+          <img id="logo" src="img/logo.svg" alt="" />
+          <button id="return2" class="return">
+            <i class="fa-solid fa-x"></i>
+          </button>
+        </div>
+        <h1>test</h1>
+      </div>
+    </div>
+
     <!-- COSTUMIZE PAGE ------------------ -->
     <div id="costumizePage" class="hidden">
       <section class="costumizeContainer">
         <div class="navbar">
           <img id="logo" src="img/logo.svg" alt="" />
-          <button class="return"><i class="fa-solid fa-x"></i></button>
+          <button id="return1" class="return">
+            <i class="fa-solid fa-x"></i>
+          </button>
         </div>
         <section class="selectedCarContainer">
           <div id="selectedCarInfo">
@@ -55,7 +71,30 @@
             <h2>Total price: <span id="totalPrice"></span></h2>
             <button id="buy">Buy now</button>
           </aside>
-          <div class="formContainer"></div>
+          <div class="formContainer">
+            <div class="radio-inputs">
+              <label class="radio">
+                <input type="radio" name="radio" checked="" />
+                <span class="name">Cash</span>
+              </label>
+              <label class="radio">
+                <input type="radio" name="radio" />
+                <span class="name">Leasing</span>
+              </label>
+            </div>
+            <div class="nameContainer">
+              <label class="inputLabel" for="nameAndSurname"
+                >First name and surname:
+              </label>
+              <input id="nameAndSurname" type="text" />
+            </div>
+            <div class="dateContainer">
+              <label class="inputLabel" for="data"
+                >Select delivery date:
+              </label>
+              <input type="date" id="data" name="data" />
+            </div>
+          </div>
         </footer>
       </section>
     </div>

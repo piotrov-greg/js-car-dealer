@@ -1,7 +1,8 @@
 const $carListContainer = document.querySelector(".carListContainer");
 const $costumizePage = document.getElementById("costumizePage");
 const $carFilter = document.getElementById("car-filter");
-const $return = document.querySelector(".return");
+const $return = document.querySelector("#return1");
+const $return2 = document.querySelector("#return2");
 const $accItem = document.querySelectorAll(".accItem");
 const $customImg = document.getElementById("customImg");
 const $customMake = document.getElementById("customMake");
@@ -10,6 +11,10 @@ const $customYear = document.getElementById("customYear");
 const $customMileage = document.getElementById("customMileage");
 const $customPrice = document.getElementById("customPrice");
 const $totalPrice = document.getElementById("totalPrice");
+const dateInput = document.getElementById("data");
+const inputValue = document.getElementById("nameAndSurname");
+const $buy = document.getElementById("buy");
+const $endPage = document.getElementById("endScreen");
 
 let carPrice;
 
@@ -82,3 +87,25 @@ for (let i = 0; i < $accItem.length; i++) {
     $totalPrice.innerText = `$${carPrice}`;
   });
 }
+
+// date------------------
+
+let today = new Date();
+today.setDate(today.getDate() + 14);
+let minimalDate = today.toISOString().split("T")[0];
+dateInput.setAttribute("min", minimalDate);
+
+// formCheck-----------------
+function checkForm() {
+  let inputTmp = inputValue.value.trim();
+  let regex = /^[^\s]+\s[^\s]+$/;
+  if (regex.test(inputTmp) && dateInput.value) {
+    $endPage.classList.remove("hidden");
+  } else {
+    alert("incorrect date");
+  }
+}
+
+$buy.addEventListener("click", checkForm);
+
+$return2.addEventListener("click", () => $endPage.classList.add("hidden"));

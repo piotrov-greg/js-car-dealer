@@ -28,3 +28,16 @@ body {
 .hidden {
   display: none;
 }
+
+.return {
+  background-color: #ff9f1c;
+  border: none;
+  border-radius: 5px;
+  width: 60px;
+  height: 60px;
+  color: rgb(240, 240, 240);
+}
+
+.return:hover {
+  color: black;
+}
