@@ -15,6 +15,8 @@ const dateInput = document.getElementById("data");
 const inputValue = document.getElementById("nameAndSurname");
 const $buy = document.getElementById("buy");
 const $endPage = document.getElementById("endScreen");
+const $cash = document.getElementById("cash");
+const $leasing = document.getElementById("leasing");
 
 let carPrice;
 
@@ -95,11 +97,20 @@ today.setDate(today.getDate() + 14);
 let minimalDate = today.toISOString().split("T")[0];
 dateInput.setAttribute("min", minimalDate);
 
+let pricingMethod;
+const changePricingMethod = function () {
+  pricingMethod = this.textContent;
+  console.log(pricingMethod);
+};
+
+$cash.addEventListener("click", changePricingMethod);
+$leasing.addEventListener("click", changePricingMethod);
+
 // formCheck-----------------
 function checkForm() {
   let inputTmp = inputValue.value.trim();
   let regex = /^[^\s]+\s[^\s]+$/;
-  if (regex.test(inputTmp) && dateInput.value) {
+  if (pricingMethod && regex.test(inputTmp) && dateInput.value) {
     $endPage.classList.remove("hidden");
   } else {
     alert("incorrect date");
@@ -107,5 +118,4 @@ function checkForm() {
 }
 
 $buy.addEventListener("click", checkForm);
-
 $return2.addEventListener("click", () => $endPage.classList.add("hidden"));
