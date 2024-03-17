@@ -17,8 +17,23 @@ const $buy = document.getElementById("buy");
 const $endPage = document.getElementById("endScreen");
 const $cash = document.getElementById("cash");
 const $leasing = document.getElementById("leasing");
+const $recapContainer = document.getElementById("recap");
+const $recapImg = document.getElementById("recapImg");
+const $recapName = document.getElementById("recapName");
+const $recapPayment = document.getElementById("recapPayment");
+const $recapDate = document.getElementById("recapDate");
+const radioButtons = document.querySelectorAll(
+  'input[type="radio"][name="radio"]'
+);
+
+const $recapPrice = document.getElementById("recapPrice");
 
 let carPrice;
+let selectedCar = {
+  img: "",
+  make: "",
+  model: "",
+};
 
 function displayCars(cars) {
   $carListContainer.innerHTML = "";
@@ -44,6 +59,9 @@ function displayCars(cars) {
       $customPrice.innerHTML = `$${car.price}`;
       carPrice = car.price;
       $totalPrice.innerText = `$${carPrice}`;
+      selectedCar.img = `${car.image}`;
+      selectedCar.make = `${car.brand}`;
+      selectedCar.model = `${car.model}`;
     });
 
     $carListContainer.appendChild(carDiv);
@@ -70,6 +88,12 @@ displayCars(carList);
 
 $return.addEventListener("click", () => {
   $costumizePage.classList.add("hidden");
+
+  for (let i = 0; i < $accItem.length; i++) {
+    if ($accItem[i].classList.contains("accItemClicked")) {
+      $accItem[i].classList.remove("accItemClicked");
+    }
+  }
 });
 
 let itemPrice;
@@ -100,22 +124,70 @@ dateInput.setAttribute("min", minimalDate);
 let pricingMethod;
 const changePricingMethod = function () {
   pricingMethod = this.textContent;
-  console.log(pricingMethod);
 };
 
 $cash.addEventListener("click", changePricingMethod);
 $leasing.addEventListener("click", changePricingMethod);
 
 // formCheck-----------------
+
+let selectedSpanContent;
+
+function radioBtnCheck() {
+  radioButtons.forEach((radioButton) => {
+    if (radioButton.checked) {
+      selectedSpanContent =
+        radioButton.parentElement.querySelector("span.name").textContent;
+    }
+  });
+}
+
+function recapPageContent(selectedCar) {
+  radioBtnCheck();
+  $recapImg.src = `${selectedCar.img}`;
+  $recapName.innerHTML = `${inputValue.value}, thank you for purchasing the ${selectedCar.make} ${selectedCar.model}`;
+  $recapPayment.innerHTML = `Payment method: ${selectedSpanContent}`;
+  $recapDate.innerHTML = `Delivery date: ${dateInput.value}`;
+  $recapPrice.innerHTML = `Total price: $${carPrice}`;
+}
+
+$buy.addEventListener("click", function () {
+  checkForm();
+});
+
 function checkForm() {
   let inputTmp = inputValue.value.trim();
   let regex = /^[^\s]+\s[^\s]+$/;
   if (pricingMethod && regex.test(inputTmp) && dateInput.value) {
     $endPage.classList.remove("hidden");
+    recapPageContent(selectedCar);
+    clearLocalStorage();
   } else {
     alert("incorrect date");
   }
 }
-
-$buy.addEventListener("click", checkForm);
 $return2.addEventListener("click", () => $endPage.classList.add("hidden"));
+
+// LOCALSTORAGE -----------------
+if (localStorage.getItem("form_data")) {
+  const formData = JSON.parse(localStorage.getItem("form_data"));
+  inputValue.value = formData.nameAndSurname;
+  dateInput.value = formData.date;
+}
+
+inputValue.addEventListener("input", saveFormData);
+dateInput.addEventListener("input", saveFormData);
+
+function saveFormData() {
+  const formData = {
+    nameAndSurname: inputValue.value,
+    date: dateInput.value,
+  };
+  localStorage.setItem("form_data", JSON.stringify(formData));
+}
+function clearLocalStorage() {
+  localStorage.removeItem("form_data");
+  // Resetowanie pól formularza
+  inputValue.value = "";
+  dateInput.value = "";
+}

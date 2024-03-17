@@ -10,3 +10,15 @@
   width: 90%;
   margin: 0 auto;
 }
+
+#recapImg {
+  width: 600px;
+  height: 400px;
+}
+
+.recap {
+  text-align: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  width: 600px;
+}
