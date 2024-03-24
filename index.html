@@ -16,34 +16,51 @@
     ></script>
   </head>
   <body>
-    <!-- END SCREEN-------------- -->
-    <div id="endScreen" class="hidden">
-      <div class="endS-container">
-        <div class="navbar">
-          <img id="logo" src="img/logo.svg" alt="" />
-          <button id="return2" class="return">
-            <i class="fa-solid fa-x"></i>
-          </button>
-        </div>
-        <div class="recap">
-          <img id="recapImg" class="cardCarImg" src="" alt="" />
-          <h1 id="recapName"></h1>
-          <h2 id="recapPayment"></h2>
-          <h2 id="recapDate"></h2>
-          <h2 id="recapPrice"></h2>
-        </div>
+    <!-- NAVBAR --------------------- -->
+    <nav class="navbar">
+      <img id="logo" src="img/logo.svg" alt="CarDealer" />
+      <div class="navbarIcons">
+        <i class="fa-solid fa-star" style="color: #ff9f1c"></i>
+        <i class="fa-solid fa-cart-shopping" style="color: #ff9f1c"></i>
       </div>
+    </nav>
+
+    <!-- MAIN PAGE---------------------- -->
+    <div class="container">
+      <main class="mainSection">
+        <div class="mainTitle">
+          <h1>
+            <span>CarDealer:</span> <br />Quality Pre-Owned Cars, <br />
+            Your Reliable Choice!
+          </h1>
+        </div>
+        <aside class="imgAside">
+          <img src="img/mainBG.png" alt="silver BMW" />
+          <div class="carBg"></div>
+        </aside>
+      </main>
+      <section class="searchContainer">
+        <div class="searchInputContainer">
+          <select id="car-filter">
+            <option value="any">Any Make</option>
+            <option value="bmw">BMW</option>
+            <option value="audi">Audi</option>
+            <option value="toyota">Toyota</option>
+            <option value="honda">Honda</option>
+            <option value="volkswagen">Volkswagen</option>
+            <option value="ford">Ford</option>
+          </select>
+        </div>
+      </section>
+      <section class="carListContainer"></section>
     </div>
 
     <!-- COSTUMIZE PAGE ------------------ -->
     <div id="costumizePage" class="hidden">
       <section class="costumizeContainer">
-        <div class="navbar">
-          <img id="logo" src="img/logo.svg" alt="" />
-          <button id="return1" class="return">
-            <i class="fa-solid fa-x"></i>
-          </button>
-        </div>
+        <button id="return1" class="return">
+          <i class="fa-solid fa-x"></i>
+        </button>
         <section class="selectedCarContainer">
           <div id="selectedCarInfo">
             <img id="customImg" class="cardCarImg" src="" alt="" />
@@ -79,11 +96,11 @@
           </aside>
           <div class="formContainer">
             <div class="radio-inputs">
-              <label class="radio">
+              <label class="radio" for="cash">
                 <input type="radio" name="radio" />
                 <span id="cash" class="name">Cash</span>
               </label>
-              <label class="radio">
+              <label class="radio" for="leasing">
                 <input type="radio" name="radio" />
                 <span id="leasing" class="name">Leasing</span>
               </label>
@@ -105,41 +122,21 @@
       </section>
     </div>
 
-    <!-- MAIN PAGE---------------------- -->
-    <div class="container">
-      <nav class="navbar">
-        <img id="logo" src="img/logo.svg" alt="CarDealer" />
-        <div class="navbarIcons">
-          <i class="fa-solid fa-star" style="color: #ff9f1c"></i>
-          <i class="fa-solid fa-cart-shopping" style="color: #ff9f1c"></i>
+    <!-- END SCREEN-------------- -->
+    <div id="endScreen" class="hidden">
+      <div class="endS-container">
+        <button id="return2" class="return">
+          <i class="fa-solid fa-x"></i>
+        </button>
+
+        <div class="recap">
+          <img id="recapImg" class="cardCarImg" src="" alt="" />
+          <h1 id="recapName"></h1>
+          <h2 id="recapPayment"></h2>
+          <h2 id="recapDate"></h2>
+          <h2 id="recapPrice"></h2>
         </div>
-      </nav>
-      <main class="mainSection">
-        <div class="mainTitle">
-          <h1>
-            <span>CarDealer:</span> <br />Quality Pre-Owned Cars, <br />
-            Your Reliable Choice!
-          </h1>
-        </div>
-        <aside class="imgAside">
-          <img src="img/mainBG.png" alt="silver BMW" />
-          <div class="carBg"></div>
-        </aside>
-      </main>
-      <section class="searchContainer">
-        <div class="searchInputContainer">
-          <select id="car-filter">
-            <option value="any">Any Make</option>
-            <option value="bmw">BMW</option>
-            <option value="audi">Audi</option>
-            <option value="toyota">Toyota</option>
-            <option value="honda">Honda</option>
-            <option value="volkswagen">Volkswagen</option>
-            <option value="ford">Ford</option>
-          </select>
-        </div>
-      </section>
-      <section class="carListContainer"></section>
+      </div>
     </div>
   </body>
 </html>

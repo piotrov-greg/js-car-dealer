@@ -12,9 +12,12 @@ body {
 
 .navbar {
   height: 100px;
+  width: 90%;
+  position: absolute;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 10;
 }
 
 .fa-solid {

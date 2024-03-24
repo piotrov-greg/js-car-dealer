@@ -1,4 +1,5 @@
 const $carListContainer = document.querySelector(".carListContainer");
+const $mainPage = document.querySelector(".container");
 const $costumizePage = document.getElementById("costumizePage");
 const $carFilter = document.getElementById("car-filter");
 const $return = document.querySelector("#return1");
@@ -36,7 +37,6 @@ let selectedCar = {
 };
 
 function displayCars(cars) {
-  $carListContainer.innerHTML = "";
   cars.forEach((car) => {
     const carDiv = document.createElement("div");
     carDiv.classList.add("carItem");
@@ -48,15 +48,15 @@ function displayCars(cars) {
       <p>Mileage: <span>${car.mileage}</span></p>
       <h2 class="price"><span>$${car.price}<span></h2>
     `;
-
     carDiv.addEventListener("click", function () {
       $costumizePage.classList.remove("hidden");
+      $mainPage.classList.add("hidden");
       $customImg.src = `${car.image}`;
-      $customMake.innerHTML = `${car.brand} ${car.model}`;
-      $customYear.innerHTML = `${car.year}`;
-      $customHp.innerHTML = `${car.power}`;
-      $customMileage.innerHTML = `${car.mileage}`;
-      $customPrice.innerHTML = `$${car.price}`;
+      $customMake.innerText = `${car.brand} ${car.model}`;
+      $customYear.innerText = `${car.year}`;
+      $customHp.innerText = `${car.power}`;
+      $customMileage.innerText = `${car.mileage}`;
+      $customPrice.innerText = `$${car.price}`;
       carPrice = car.price;
       $totalPrice.innerText = `$${carPrice}`;
       selectedCar.img = `${car.image}`;
@@ -145,10 +145,10 @@ function radioBtnCheck() {
 function recapPageContent(selectedCar) {
   radioBtnCheck();
   $recapImg.src = `${selectedCar.img}`;
-  $recapName.innerHTML = `${inputValue.value}, thank you for purchasing the ${selectedCar.make} ${selectedCar.model}`;
-  $recapPayment.innerHTML = `Payment method: ${selectedSpanContent}`;
-  $recapDate.innerHTML = `Delivery date: ${dateInput.value}`;
-  $recapPrice.innerHTML = `Total price: $${carPrice}`;
+  $recapName.innerText = `${inputValue.value}, thank you for purchasing the ${selectedCar.make} ${selectedCar.model}`;
+  $recapPayment.innerText = `Payment method: ${selectedSpanContent}`;
+  $recapDate.innerText = `Delivery date: ${dateInput.value}`;
+  $recapPrice.innerText = `Total price: $${carPrice}`;
 }
 
 $buy.addEventListener("click", function () {
