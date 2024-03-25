@@ -2,8 +2,8 @@ const $carListContainer = document.querySelector(".carListContainer");
 const $mainPage = document.querySelector(".container");
 const $costumizePage = document.getElementById("costumizePage");
 const $carFilter = document.getElementById("car-filter");
-const $return = document.querySelector("#return1");
-const $return2 = document.querySelector("#return2");
+const $return1 = document.getElementById("return1");
+const $return2 = document.getElementById("return2");
 const $accItem = document.querySelectorAll(".accItem");
 const $customImg = document.getElementById("customImg");
 const $customMake = document.getElementById("customMake");
@@ -26,8 +26,8 @@ const $recapDate = document.getElementById("recapDate");
 const radioButtons = document.querySelectorAll(
   'input[type="radio"][name="radio"]'
 );
-
 const $recapPrice = document.getElementById("recapPrice");
+const $navbarIcons = document.querySelector(".navbarIcons");
 
 let carPrice;
 let selectedCar = {
@@ -35,6 +35,19 @@ let selectedCar = {
   make: "",
   model: "",
 };
+
+function showHide(show, hide) {
+  show.classList.remove("hidden");
+  hide.classList.add("hidden");
+}
+
+function resetAccessories() {
+  for (let i = 0; i < $accItem.length; i++) {
+    if ($accItem[i].classList.contains("accItemClicked")) {
+      $accItem[i].classList.remove("accItemClicked");
+    }
+  }
+}
 
 function displayCars(cars) {
   cars.forEach((car) => {
@@ -49,8 +62,8 @@ function displayCars(cars) {
       <h2 class="price"><span>$${car.price}<span></h2>
     `;
     carDiv.addEventListener("click", function () {
-      $costumizePage.classList.remove("hidden");
-      $mainPage.classList.add("hidden");
+      showHide($costumizePage, $mainPage);
+      showHide($return1, $navbarIcons);
       $customImg.src = `${car.image}`;
       $customMake.innerText = `${car.brand} ${car.model}`;
       $customYear.innerText = `${car.year}`;
@@ -86,14 +99,10 @@ $carFilter.addEventListener("change", function () {
 
 displayCars(carList);
 
-$return.addEventListener("click", () => {
-  $costumizePage.classList.add("hidden");
-
-  for (let i = 0; i < $accItem.length; i++) {
-    if ($accItem[i].classList.contains("accItemClicked")) {
-      $accItem[i].classList.remove("accItemClicked");
-    }
-  }
+$return1.addEventListener("click", () => {
+  showHide($mainPage, $costumizePage);
+  showHide($navbarIcons, $return1);
+  resetAccessories();
 });
 
 let itemPrice;
@@ -151,15 +160,13 @@ function recapPageContent(selectedCar) {
   $recapPrice.innerText = `Total price: $${carPrice}`;
 }
 
-$buy.addEventListener("click", function () {
-  checkForm();
-});
+$buy.addEventListener("click", checkForm);
 
 function checkForm() {
-  let inputTmp = inputValue.value.trim();
-  let regex = /^[^\s]+\s[^\s]+$/;
-  if (pricingMethod && regex.test(inputTmp) && dateInput.value) {
-    $endPage.classList.remove("hidden");
+  let inputTmp = inputValue.value.trim().split(" ");
+  if (pricingMethod && inputTmp.length === 2 && dateInput.value) {
+    showHide($endPage, $costumizePage);
+    showHide($return2, $return1);
     recapPageContent(selectedCar);
     clearLocalStorage();
   } else {
@@ -167,13 +174,8 @@ function checkForm() {
   }
 }
 $return2.addEventListener("click", () => {
-  $endPage.classList.add("hidden");
-
-  for (let i = 0; i < $accItem.length; i++) {
-    if ($accItem[i].classList.contains("accItemClicked")) {
-      $accItem[i].classList.remove("accItemClicked");
-    }
-  }
+  showHide($costumizePage, $endPage);
+  showHide($return1, $return2);
 });
 
 // LOCALSTORAGE -----------------

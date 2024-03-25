@@ -20,9 +20,15 @@
     <nav class="navbar">
       <img id="logo" src="img/logo.svg" alt="CarDealer" />
       <div class="navbarIcons">
-        <i class="fa-solid fa-star" style="color: #ff9f1c"></i>
-        <i class="fa-solid fa-cart-shopping" style="color: #ff9f1c"></i>
+        <i class="fa-solid fa-star navicons"></i>
+        <i class="fa-solid fa-cart-shopping navicons"></i>
       </div>
+      <button id="return1" class="return hidden">
+        <i class="fa-solid fa-x"></i>
+      </button>
+      <button id="return2" class="return hidden">
+        <i class="fa-solid fa-x"></i>
+      </button>
     </nav>
 
     <!-- MAIN PAGE---------------------- -->
@@ -58,9 +64,6 @@
     <!-- COSTUMIZE PAGE ------------------ -->
     <div id="costumizePage" class="hidden">
       <section class="costumizeContainer">
-        <button id="return1" class="return">
-          <i class="fa-solid fa-x"></i>
-        </button>
         <section class="selectedCarContainer">
           <div id="selectedCarInfo">
             <img id="customImg" class="cardCarImg" src="" alt="" />
@@ -96,12 +99,12 @@
           </aside>
           <div class="formContainer">
             <div class="radio-inputs">
-              <label class="radio" for="cash">
-                <input type="radio" name="radio" />
+              <label class="radio" for="pricingCash">
+                <input id="pricingCash" type="radio" name="radio" />
                 <span id="cash" class="name">Cash</span>
               </label>
-              <label class="radio" for="leasing">
-                <input type="radio" name="radio" />
+              <label class="radio" for="pricingLeasing">
+                <input id="pricingLeasing" type="radio" name="radio" />
                 <span id="leasing" class="name">Leasing</span>
               </label>
             </div>
@@ -125,10 +128,6 @@
     <!-- END SCREEN-------------- -->
     <div id="endScreen" class="hidden">
       <div class="endS-container">
-        <button id="return2" class="return">
-          <i class="fa-solid fa-x"></i>
-        </button>
-
         <div class="recap">
           <img id="recapImg" class="cardCarImg" src="" alt="" />
           <h1 id="recapName"></h1>

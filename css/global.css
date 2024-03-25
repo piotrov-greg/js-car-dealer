@@ -19,6 +19,15 @@ body {
   align-items: center;
   z-index: 10;
 }
+.navbarIcons {
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navicons {
+  color: #ff9f1c;
+}
 
 .fa-solid {
   font-size: 2rem;
@@ -38,7 +47,6 @@ body {
   border-radius: 5px;
   width: 60px;
   height: 60px;
-  color: rgb(240, 240, 240);
 }
 
 .return:hover {

@@ -3,19 +3,6 @@
   margin-top: 100px;
 }
 
-.navbar {
-  height: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navbarIcons {
-  width: 200px;
-  display: flex;
-  justify-content: space-around;
-}
-
 .mainSection {
   height: 70vh;
   display: flex;
