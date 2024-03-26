@@ -110,3 +110,38 @@ h2 {
   font-size: 2rem;
   color: #ff9f1c;
 }
+
+@media only screen and (max-width: 1000px) {
+  .carListContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .mainSection {
+    height: 60vh;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .carListContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .mainSection {
+    height: 40vh;
+  }
+  .mainTitle h1 {
+    font-size: 2rem;
+    color: rgb(22, 22, 22);
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .carListContainer {
+    grid-template-columns: 1fr;
+  }
+  .mainSection {
+    height: 30vh;
+  }
+  .mainTitle h1 {
+    font-size: 1.5rem;
+    color: rgb(22, 22, 22);
+  }
+}

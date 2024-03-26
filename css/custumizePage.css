@@ -8,6 +8,9 @@
 .costumizeContainer {
   width: 90%;
   margin: 0 auto;
+  background-color: red;
+  display: grid;
+  grid-area: auto;
 }
 
 .selectedCarContainer {
@@ -48,11 +51,16 @@ h2 {
   gap: 30px;
 }
 
+.accItem h3 {
+  font-size: 1rem;
+}
+
 .accItem {
   background-color: rgb(234, 234, 234);
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 
   border-radius: 15px;
   border: 2px solid rgba(255, 255, 255, 0.393);
@@ -161,7 +169,7 @@ h2 {
 
 .dateContainer,
 .nameContainer {
-  width: 600px;
+  width: 80%;
   display: flex;
   justify-content: flex-start;
   padding-top: 30px;
@@ -185,4 +193,24 @@ h2 {
 }
 .inputLabel {
   width: 180px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .dateContainer,
+  .nameContainer {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .selectedCarContainer {
+    flex-direction: column;
+  }
+  #selectedCarInfo {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
 }

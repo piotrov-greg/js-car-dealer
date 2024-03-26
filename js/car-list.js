@@ -56,7 +56,7 @@ const carList = [
   {
     image: "https://shorturl.at/wNQW0",
     brand: "Mercedes",
-    model: "C-Class",
+    model: "C",
     year: 2017,
     power: "180 HP",
     mileage: "55,000 km",
