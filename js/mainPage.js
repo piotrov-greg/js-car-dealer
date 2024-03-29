@@ -50,6 +50,7 @@ function resetAccessories() {
 }
 
 function displayCars(cars) {
+  $carListContainer.innerHTML = "";
   cars.forEach((car) => {
     const carDiv = document.createElement("div");
     carDiv.classList.add("carItem");
@@ -94,6 +95,7 @@ function filterCars(make) {
 
 $carFilter.addEventListener("change", function () {
   const selectedMake = this.value.toLowerCase();
+
   filterCars(selectedMake);
 });
 

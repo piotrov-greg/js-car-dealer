@@ -4,21 +4,31 @@
   position: absolute;
   z-index: 8;
   margin-top: 100px;
+  text-align: center;
 }
 
 .endS-container {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
 }
 
 #recapImg {
-  width: 600px;
-  height: 400px;
+  width: 60%;
+  min-height: 400px;
 }
 
-.recap {
-  text-align: center;
-  margin: 0 auto;
-  flex-wrap: wrap;
-  width: 600px;
+.recap h1 {
+  font-size: 2.5rem;
+}
+
+.recap h2 {
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 850px) {
+  #recapImg {
+    width: 90%;
+    min-height: 100px;
+    object-fit: cover;
+  }
 }
