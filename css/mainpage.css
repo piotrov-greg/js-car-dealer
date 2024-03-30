@@ -142,7 +142,11 @@ h2 {
     height: 30vh;
   }
   .mainTitle h1 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: rgb(22, 22, 22);
+  }
+
+  .carItem {
+    height: 380px;
   }
 }
