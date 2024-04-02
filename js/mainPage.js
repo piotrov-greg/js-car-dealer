@@ -28,6 +28,7 @@ const radioButtons = document.querySelectorAll(
 );
 const $recapPrice = document.getElementById("recapPrice");
 const $navbarIcons = document.querySelector(".navbarIcons");
+const $alert = document.getElementById("alert");
 
 let carPrice;
 let selectedCar = {
@@ -131,6 +132,7 @@ let today = new Date();
 today.setDate(today.getDate() + 14);
 let minimalDate = today.toISOString().split("T")[0];
 dateInput.setAttribute("min", minimalDate);
+dateInput.setAttribute("max", minimalDate);
 
 let pricingMethod;
 const changePricingMethod = function () {
@@ -172,7 +174,10 @@ function checkForm() {
     recapPageContent(selectedCar);
     clearLocalStorage();
   } else {
-    alert("incorrect date");
+    $alert.classList.remove("hidden");
+    setTimeout(function () {
+      $alert.classList.add("hidden");
+    }, 1500);
   }
 }
 $return2.addEventListener("click", () => {
